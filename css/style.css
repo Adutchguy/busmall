@@ -1,0 +1,83 @@
+head {
+  width: 100%;
+}
+
+body {
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+
+
+/*HEADER SECTION*/
+
+header {
+  width: 100%;
+
+}
+#busimg {
+  width: 100%;
+  display: block;
+}
+
+/*GENERAL INFO SECTION*/
+
+#infosection {
+  width: 90%;
+  display: block;
+}
+
+#infosection h2 {
+  text-align: center;
+  font-size: 2vw;
+}
+#infosection p {
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+/*IMAGE SECTION*/
+
+#imagesection {
+  width: 100%;
+  display: block;
+}
+.imagecontainer {
+  width: 100%
+}
+.image{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+.image h3{
+  font-size: 5vw;
+}
+.imagePH1 {
+
+}
+.imagePH2 {
+
+}
+.imagePH3 {
+
+}
+
+/*RESULTS SECTION*/
+
+
+
+/*FOOTER SECTION*/
+
+footer{
+  width: 16%;
+  border: 1px solid black;
+  margin: 5%;
+  padding: 1%;
+}
+footer i{
+  font-style: italic;
+}
+footer strong{
+  font-weight: bold;
+}
