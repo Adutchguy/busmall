@@ -78,16 +78,18 @@ function renderImages() {
 }
 
 function showResults() {
-  var list = document.getElementById('list');
+  var summarysection = document.getElementById('summarysection');
   var summaryh2 = document.getElementById('summaryh2');
   summaryh2.innerText = 'HERE ARE THE RESULTS';
-  list.appendChild(summaryh2);
-  var ul = document.createElement('ul');
-  list.appendChild(ul);
+  summarysection.appendChild(summaryh2);
+  var canvas = document.createElement('canvas');
+  canvas.id = 'canvas';
+  summarysection.appendChild(canvas);
+  chart();
   for (var i = 0; i < imageData.length; i++) {
     var li = document.createElement('li');
-    li.innerText = imageData[i].clicks + ' votes for ' + imageData[i].name + '. ' + imageData[i].name + ' received ' + Math.ceil((imageData[i].clicks / totalClicks) * 100) + '% of the total clicks.';
-    ul.appendChild(li);
+    // li.innerText = imageData[i].clicks + ' votes for ' + imageData[i].name + '. ' + imageData[i].name + ' received ' + Math.ceil((imageData[i].clicks / totalClicks) * 100) + '% of the total clicks.';
+    // ul.appendChild(li);
   }
 }
 
