@@ -49,18 +49,22 @@ header {
   display: inline-block;
   width: 33%;
   text-align: center;
+  position: relative;
 }
 .image h3{
   font-size: 5vw;
 }
-.imagePH1 {
-
+#imagePH1 {
+  width: 60%;
+  height: 70%;
 }
-.imagePH2 {
-
+#imagePH2 {
+  width: 60%;
+  height: 70%;
 }
-.imagePH3 {
-
+#imagePH3 {
+  width: 60%;
+  height: 70%;
 }
 
 /*RESULTS SECTION*/
