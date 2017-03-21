@@ -8,6 +8,10 @@ body {
   display: block;
 }
 
+main {
+  background-color:  rgba(0, 255, 240, 0.35);
+  box-shadow: 5px 5px 10px 10px rgba(0, 255, 240, 0.35);
+}
 
 /*HEADER SECTION*/
 
@@ -18,6 +22,7 @@ header {
 #busimg {
   width: 100%;
   display: block;
+  border-radius: 0 0 10px 10px;
 }
 
 /*GENERAL INFO SECTION*/
@@ -25,15 +30,19 @@ header {
 #infosection {
   width: 90%;
   display: block;
+  margin: 5% auto;
+  border: 4px double;
+  padding: 2%;
 }
 
 #infosection h2 {
   text-align: center;
-  font-size: 2vw;
+  font-size: 4vw;
 }
 #infosection p {
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 2vw;
+  margin-top: 1%;
 }
 
 /*IMAGE SECTION*/
@@ -41,34 +50,72 @@ header {
 #imagesection {
   width: 100%;
   display: block;
+  height: 36vw;
 }
 .imagecontainer {
-  width: 100%
+  width: 100%;
+  height: 36vw;
 }
 .image{
   display: inline-block;
   width: 33%;
   text-align: center;
   position: relative;
+  height: 31vw;
 }
 .image h3{
   font-size: 5vw;
 }
 #imagePH1 {
   width: 60%;
-  height: 70%;
+  height: 60%;
+  cursor: crosshair;
+  background-color: #00B2A8;
+  opacity: .9;
+  box-shadow: 5px 5px 10px 10px #00B2A8;
+  border-radius: 10px;
 }
 #imagePH2 {
   width: 60%;
-  height: 70%;
+  height: 60%;
+  cursor: crosshair;
+  background-color: #00B2A8;
+  opacity: .9;
+  box-shadow: 5px 5px 10px 10px #00B2A8;
+  border-radius: 10px;
 }
 #imagePH3 {
   width: 60%;
-  height: 70%;
+  height: 60%;
+  cursor: crosshair;
+  background-color: #00B2A8;
+  opacity: .9;
+  box-shadow: 5px 5px 10px 10px #00B2A8;
+  border-radius: 10px;
 }
 
 /*RESULTS SECTION*/
 
+
+#summarysection {
+  width: 62%;
+  margin:auto;
+}
+
+#summaryh2 {
+  text-align: center;
+  margin: 5% auto;
+}
+
+#list {
+  width: 100%;
+  margin:auto;
+  font-size: 2vw;
+}
+
+li {
+  list-style: circle;
+}
 
 
 /*FOOTER SECTION*/
@@ -78,6 +125,12 @@ footer{
   border: 1px solid black;
   margin: 5%;
   padding: 1%;
+  background-color: rgba(189, 69, 7, 0.57);
+  box-shadow: 0px 0px 54px 5px rgba(255, 60, 7, 0.57);
+  margin-left: 0%;
+  margin-bottom: 0%;
+  font-size: 1vw;
+  text-align: center;
 }
 footer i{
   font-style: italic;

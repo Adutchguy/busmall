@@ -4,9 +4,9 @@ var totalClicks = 0;
 var image1 = document.getElementById('imagePH1');
 var image2 = document.getElementById('imagePH2');
 var image3 = document.getElementById('imagePH3');
-var imagecontainer = document.getElementById('imagecontainer');
+var imagesection = document.getElementById('imagesection');
 var imageData = [];
-var chosen = [];
+var lastThreeImgs = [];
 
 var bag = new Images('bag', 'img-repo/bag.jpg');
 var banana = new Images('banana', 'img-repo/banana.jpg');
@@ -45,7 +45,7 @@ function randomImages() {
   var newImage = [];
   while (newImage.length < 3) {
     var num = randomNumber();
-    if (!chosen.includes(num) && !newImage.includes(num)) {
+    if (!lastThreeImgs.includes(num) && !newImage.includes(num)) {
       newImage.push(num);
     }
   }
@@ -55,7 +55,7 @@ function randomImages() {
   image2.className = newImage[1];
   image3.src = imageData[newImage[2]].path;
   image3.className = newImage[2];
-  chosen = newImage;
+  lastThreeImgs = newImage;
 }
 randomImages();
 
@@ -73,12 +73,15 @@ function renderImages() {
     image1.removeEventListener('click', renderImages);
     image2.removeEventListener('click', renderImages);
     image3.removeEventListener('click', renderImages);
-    imagecontainer.remove();
+    imagesection.remove();
   }
 }
 
 function showResults() {
   var list = document.getElementById('list');
+  var summaryh2 = document.getElementById('summaryh2');
+  summaryh2.innerText = 'HERE ARE THE RESULTS';
+  list.appendChild(summaryh2);
   var ul = document.createElement('ul');
   list.appendChild(ul);
   for (var i = 0; i < imageData.length; i++) {
