@@ -4,6 +4,7 @@ var totalClicks = 0;
 var image1 = document.getElementById('imagePH1');
 var image2 = document.getElementById('imagePH2');
 var image3 = document.getElementById('imagePH3');
+var imagecontainer = document.getElementById('imagecontainer');
 var imageData = [];
 var chosen = [];
 
@@ -72,20 +73,19 @@ function renderImages() {
     image1.removeEventListener('click', renderImages);
     image2.removeEventListener('click', renderImages);
     image3.removeEventListener('click', renderImages);
-    image1.remove();
-    image2.remove();
-    image3.remove();
+    imagecontainer.remove();
   }
 }
 
 function showResults() {
   var list = document.getElementById('list');
   var ul = document.createElement('ul');
+  list.appendChild(ul);
   for (var i = 0; i < imageData.length; i++) {
     var li = document.createElement('li');
-    li.innerText = imageData[i].clicks + ' votes for ' + imageData[i].name + '. Picked ' + ((totalClicks / imageData[i].clicks) + 1) + '% of the time.';
+    li.innerText = imageData[i].clicks + ' votes for ' + imageData[i].name + '. ' + imageData[i].name + ' received ' + Math.ceil((imageData[i].clicks / totalClicks) * 100) + '% of the total clicks.';
+    ul.appendChild(li);
   }
-  list.appendChild(ul);
 }
 
 image1.addEventListener('click', renderImages);
