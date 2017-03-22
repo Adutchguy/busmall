@@ -23,6 +23,7 @@ header {
   width: 100%;
   display: block;
   border-radius: 0 0 10px 10px;
+  box-shadow: 5px 5px 50px 3px #000;
 }
 
 /*GENERAL INFO SECTION*/
@@ -38,11 +39,13 @@ header {
 #infosection h2 {
   text-align: center;
   font-size: 4vw;
+  font-family: 'Bitter', serif;
 }
 #infosection p {
   text-align: center;
   font-size: 2vw;
   margin-top: 1%;
+  font-family: 'Sanchez', serif;
 }
 
 /*IMAGE SECTION*/
@@ -126,7 +129,7 @@ footer{
   margin: 5%;
   padding: 1%;
   background-color: rgba(189, 69, 7, 0.57);
-  box-shadow: 0px 0px 54px 5px rgba(255, 60, 7, 0.57);
+  box-shadow: 0px 0px 5px 1px rgba(255, 60, 7, 0.57);
   margin-left: 0%;
   margin-bottom: 0%;
   font-size: 1vw;
