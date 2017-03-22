@@ -8,26 +8,26 @@ var imagesection = document.getElementById('imagesection');
 var imageData = [];
 var lastThreeImgs = [];
 
-var bag = new Images('bag', 'img-repo/bag.jpg');
-var banana = new Images('banana', 'img-repo/banana.jpg');
-var bathroom = new Images('bathroom', 'img-repo/bathroom.jpg');
-var boots = new Images('boots', 'img-repo/boots.jpg');
-var breakfast = new Images('breakfast', 'img-repo/breakfast.jpg');
-var bubblegum = new Images('bubblegum', 'img-repo/bubblegum.jpg');
-var chair = new Images('chair', 'img-repo/chair.jpg');
-var cthulhu = new Images('cthulhu', 'img-repo/cthulhu.jpg');
-var dogDuck = new Images('dog-duck', 'img-repo/dog-duck.jpg');
-var dragon = new Images('dragon', 'img-repo/dragon.jpg');
-var pen = new Images('pen', 'img-repo/pen.jpg');
-var petSweep = new Images('pet-sweep', 'img-repo/pet-sweep.jpg');
-var scissors = new Images('scissors', 'img-repo/scissors.jpg');
-var shark = new Images('shark', 'img-repo/shark.jpg');
-var sweep = new Images('sweep', 'img-repo/sweep.png');
-var tauntaun = new Images('tauntaun', 'img-repo/tauntaun.jpg');
-var unicorn = new Images('unicorn', 'img-repo/unicorn.jpg');
-var usb = new Images('usb', 'img-repo/usb.gif');
-var waterCan = new Images('water-can', 'img-repo/water-can.jpg');
-var wineGlass = new Images('wine-glass', 'img-repo/wine-glass.jpg');
+var bag = new Images('R2-D2 Bag', 'img-repo/bag.jpg');
+var banana = new Images('Banana Slicer', 'img-repo/banana.jpg');
+var bathroom = new Images('Bathroom iPad Stand', 'img-repo/bathroom.jpg');
+var boots = new Images('Open Toe Rain Boots', 'img-repo/boots.jpg');
+var breakfast = new Images('Breakfast All-In-One', 'img-repo/breakfast.jpg');
+var bubblegum = new Images("Chef's Chocolate Salty Balls", 'img-repo/bubblegum.jpg');
+var chair = new Images('Ass Blaster', 'img-repo/chair.jpg');
+var cthulhu = new Images('All Hail Cthulhu', 'img-repo/cthulhu.jpg');
+var dogDuck = new Images('Dog Hates Its Life', 'img-repo/dog-duck.jpg');
+var dragon = new Images('Dragon Meat', 'img-repo/dragon.jpg');
+var pen = new Images('Drawn To Food', 'img-repo/pen.jpg');
+var petSweep = new Images('Pet Brooming', 'img-repo/pet-sweep.jpg');
+var scissors = new Images('Useless Pizza Scissors', 'img-repo/scissors.jpg');
+var shark = new Images('Eaten Asleep', 'img-repo/shark.jpg');
+var sweep = new Images('Clean Baby', 'img-repo/sweep.png');
+var tauntaun = new Images('I thought they smelled bad on the outside!', 'img-repo/tauntaun.jpg');
+var unicorn = new Images('Rainbow Shits', 'img-repo/unicorn.jpg');
+var usb = new Images('Tentacle...', 'img-repo/usb.gif');
+var waterCan = new Images('FML Can', 'img-repo/water-can.jpg');
+var wineGlass = new Images('Cool Wine Glass', 'img-repo/wine-glass.jpg');
 
 var randomNumber = function() {
   return Math.floor(Math.random() * imageData.length);
@@ -79,18 +79,11 @@ function renderImages() {
 
 function showResults() {
   var summarysection = document.getElementById('summarysection');
-  var summaryh2 = document.getElementById('summaryh2');
-  summaryh2.innerText = 'HERE ARE THE RESULTS';
-  summarysection.appendChild(summaryh2);
   var canvas = document.createElement('canvas');
   canvas.id = 'canvas';
+  canvas.setAttribute('height','300');
   summarysection.appendChild(canvas);
   chart();
-  for (var i = 0; i < imageData.length; i++) {
-    var li = document.createElement('li');
-    // li.innerText = imageData[i].clicks + ' votes for ' + imageData[i].name + '. ' + imageData[i].name + ' received ' + Math.ceil((imageData[i].clicks / totalClicks) * 100) + '% of the total clicks.';
-    // ul.appendChild(li);
-  }
 }
 
 image1.addEventListener('click', renderImages);

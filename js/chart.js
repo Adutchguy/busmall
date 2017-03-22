@@ -5,18 +5,24 @@ function chart() {
 
   var productNames = [];
   var productClicks = [];
+  var percentOfTotal = [];
 
   for (var i = 0; i < imageData.length; i++) {
     productNames.push(imageData[i].name);
     productClicks.push(imageData[i].clicks);
+    var findPercent = (imageData[i].clicks / totalClicks) * 100;
+    percentOfTotal.push(findPercent);
   }
-
   var data = {
     labels: productNames,
     datasets: [{
       label: 'Image Clicks',
       data: productClicks,
-      backgroundColor: 'blue'
+      backgroundColor: 'rgba(66, 0, 255, 0.54)',
+      borderColor: 'rgb(0, 0, 0)',
+      borderWidth: 2,
+      hoverBorderColor: 'rgb(198, 24, 0)',
+      hoverBorderWidth: 3
     }]
   };
 
@@ -24,13 +30,23 @@ function chart() {
     type: 'horizontalBar',
     data: data,
     options: {
-      scales: {
+      title:{
+        display: true,
+        text: 'HERE ARE THE RESULTS',
+        position: 'top',
+        fontSize: 16,
+        fontFamily: "'Cutive', 'serif'",
+        fontColor: '#000'
+      },
+      scales:{
+        xAxes: [{
+
+        }],
         yAxes: [{
-          ticks: {
-            beginAtZero:true
-          }
+          barThickness: 20
         }]
       }
     }
-  });
+  }
+  );
 };
