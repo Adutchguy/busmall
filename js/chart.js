@@ -5,14 +5,15 @@ function chart() {
 
   var productNames = [];
   var productClicks = [];
-  var percentOfTotal = [];
 
+  // var percentOfTotal = [];
   for (var i = 0; i < imageData.length; i++) {
     productNames.push(imageData[i].name);
     productClicks.push(imageData[i].clicks);
-    var findPercent = (imageData[i].clicks / totalClicks) * 100;
-    percentOfTotal.push(findPercent);
+    // var findPercent = (imageData[i].clicks / totalClicks) * 100;
+    // percentOfTotal.push(findPercent);
   }
+
   var data = {
     labels: productNames,
     datasets: [{

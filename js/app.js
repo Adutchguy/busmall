@@ -29,6 +29,14 @@ var usb = new Images('Tentacle...', 'img-repo/usb.gif');
 var waterCan = new Images('FML Can', 'img-repo/water-can.jpg');
 var wineGlass = new Images('Cool Wine Glass', 'img-repo/wine-glass.jpg');
 
+if (localStorage.storageArray) {
+  var existingLocalData = JSON.parse(localStorage.storageArray);
+  for (var i = 0; i < existingLocalData.length; i++) {
+    imageData[i].clicks += existingLocalData[i].clicks;
+    imageData[i].displayed += existingLocalData[i].displayed;
+  }
+}
+
 var randomNumber = function() {
   return Math.floor(Math.random() * imageData.length);
 };
@@ -69,6 +77,7 @@ function renderImages() {
   randomImages();
   totalClicks++;
   if (totalClicks === 25) {
+    localStorage.storageArray = JSON.stringify(imageData);
     showResults();
     image1.removeEventListener('click', renderImages);
     image2.removeEventListener('click', renderImages);
