@@ -110,14 +110,11 @@ header {
   margin: 5% auto;
 }
 
-#list {
-  width: 100%;
-  margin:auto;
-  font-size: 2vw;
-}
-
-li {
-  list-style: circle;
+#button {
+  width: 20%;
+  height: 4vw;
+  display: block;
+  margin: auto;
 }
 
 
