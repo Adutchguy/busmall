@@ -1,6 +1,7 @@
 'use strict';
 
 var totalClicks = 0;
+var totalSumClicks = 0;
 var image1 = document.getElementById('imagePH1');
 var image2 = document.getElementById('imagePH2');
 var image3 = document.getElementById('imagePH3');
@@ -31,6 +32,7 @@ var wineGlass = new Images('Cool Wine Glass', 'img-repo/wine-glass.jpg');
 
 if (localStorage.storageArray) {
   var existingLSData = JSON.parse(localStorage.storageArray);
+  totalSumClicks += localStorage.totalSumClicksLS;
   for (var i = 0; i < existingLSData.length; i++) {
     imageData[i].clicks += existingLSData[i].clicks;
     imageData[i].displayed += existingLSData[i].displayed;
@@ -76,8 +78,10 @@ function renderImages() {
   imageData[image3.className].displayed++;
   randomImages();
   totalClicks++;
+  totalSumClicks++;
   if (totalClicks === 25) {
     localStorage.storageArray = JSON.stringify(imageData);
+    localStorage.totalSumClicksLS = totalSumClicks;
     showResults();
     image1.removeEventListener('click', renderImages);
     image2.removeEventListener('click', renderImages);
@@ -89,7 +93,7 @@ function renderImages() {
 function showResults() {
   var summarysection = document.getElementById('summarysection');
   var button = document.createElement('button');
-  summarysection.appendChild(button);
+  // summarysection.appendChild(button);
   button.id = 'button';
   button.innerText = 'Clear Cache';
   button.addEventListener('click', function(event) {
@@ -101,6 +105,7 @@ function showResults() {
   canvas.id = 'canvas';
   canvas.setAttribute('height','300');
   summarysection.appendChild(canvas);
+  summarysection.appendChild(button);
   chart();
 }
 
