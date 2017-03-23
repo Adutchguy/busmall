@@ -8,14 +8,6 @@ var imagesection = document.getElementById('imagesection');
 var imageData = [];
 var lastThreeImgs = [];
 
-if (localStorage.storageArray) {
-  var existingLSData = JSON.parse(localStorage.storageArray);
-  for (var i = 0; i < existingLSData.length; i++) {
-    imageData[i].clicks += existingLSData[i].clicks;
-    imageData[i].displayed += existingLSData[i].displayed;
-  }
-}
-
 var bag = new Images('R2-D2 Bag', 'img-repo/bag.jpg');
 var banana = new Images('Banana Slicer', 'img-repo/banana.jpg');
 var bathroom = new Images('Bathroom iPad Stand', 'img-repo/bathroom.jpg');
@@ -37,6 +29,13 @@ var usb = new Images('Tentacle...', 'img-repo/usb.gif');
 var waterCan = new Images('FML Can', 'img-repo/water-can.jpg');
 var wineGlass = new Images('Cool Wine Glass', 'img-repo/wine-glass.jpg');
 
+if (localStorage.storageArray) {
+  var existingLSData = JSON.parse(localStorage.storageArray);
+  for (var i = 0; i < existingLSData.length; i++) {
+    imageData[i].clicks += existingLSData[i].clicks;
+    imageData[i].displayed += existingLSData[i].displayed;
+  }
+}
 
 var randomNumber = function() {
   return Math.floor(Math.random() * imageData.length);
@@ -89,6 +88,15 @@ function renderImages() {
 
 function showResults() {
   var summarysection = document.getElementById('summarysection');
+  var button = document.createElement('button');
+  summarysection.appendChild(button);
+  button.id = 'button';
+  button.innerText = 'Clear Cache';
+  button.addEventListener('click', function(event) {
+    event.preventDefault();
+    localStorage.clear();
+    location.reload();
+  });
   var canvas = document.createElement('canvas');
   canvas.id = 'canvas';
   canvas.setAttribute('height','300');
