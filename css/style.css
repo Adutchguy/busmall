@@ -77,6 +77,10 @@ header {
   opacity: .9;
   box-shadow: 5px 5px 10px 10px #00B2A8;
   border-radius: 10px;
+
+}
+#imagePH1:hover {
+  opacity: .5;
 }
 #imagePH2 {
   width: 60%;
@@ -87,6 +91,9 @@ header {
   box-shadow: 5px 5px 10px 10px #00B2A8;
   border-radius: 10px;
 }
+#imagePH2:hover {
+  opacity: .5;
+}
 #imagePH3 {
   width: 60%;
   height: 60%;
@@ -95,6 +102,10 @@ header {
   opacity: .9;
   box-shadow: 5px 5px 10px 10px #00B2A8;
   border-radius: 10px;
+}
+#imagePH3:hover {
+  opacity: .5;
+
 }
 
 /*RESULTS SECTION*/
