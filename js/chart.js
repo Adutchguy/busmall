@@ -60,10 +60,7 @@ function chart() {
         yAxes: [{
           barThickness: 20,
           ticks: {
-            fontColor: 'black',
-            fontSize: '14',
-            fontFamily: "font-family: 'Lora', serif;"
-          },
+            fontColor: 'black'          },
         }]
       }
     }
