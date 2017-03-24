@@ -24,7 +24,7 @@ function chart() {
       backgroundColor: 'rgba(66, 0, 255, 0.54)',
       borderColor: 'rgb(0, 0, 0)',
       borderWidth: 2,
-      hoverBorderColor: 'rgb(255, 66, 0)',
+      hoverBorderColor: 'rgba(255, 66, 0,.54)',
       hoverBorderWidth: 3
     },{
       label: 'Percent of Clicks When Shown',
@@ -32,7 +32,7 @@ function chart() {
       backgroundColor: 'rgba(255,66,0,.54)',
       borderColor: 'rgb(0,0,0)',
       borderWidth: 1,
-      hoverBorderColor: 'rgb(66,0,255)',
+      hoverBorderColor: 'rgba(66,0,255,.54)',
       hoverBorderWidth: 3
     }]
   };
@@ -61,7 +61,8 @@ function chart() {
           barThickness: 20,
           ticks: {
             fontColor: 'black',
-            fontSize: '14'
+            fontSize: '14',
+            fontFamily: "font-family: 'Lora', serif;"
           },
         }]
       }
